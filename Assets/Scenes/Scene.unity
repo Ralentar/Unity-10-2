@@ -322,9 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73fa71f9a8b9944e890aa8b40d94c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _usedLayer:
-    serializedVersion: 2
-    m_Bits: 0
   _force: 500
   _radius: 5
 --- !u!114 &719565975
@@ -366,10 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd5f4c115468dc46b5d62e504a360cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ignoreLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  _maxDistance: 30
+  _maxDistance: 50
 --- !u!114 &719565978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +808,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2658345449859475724, guid: 69d1a62dd404a4b458e54aaaa90fc566, type: 3}
     m_RemovedComponents:
-    - {fileID: 9069735067013531732, guid: 69d1a62dd404a4b458e54aaaa90fc566, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Renderer))]
 
 public class Cube : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Cube : MonoBehaviour
     private void Start()
     {
         if (GetComponent<Renderer>().material != null)
-            Recolor(Dyer.GetRandomColor());
+            Recolor(Random.ColorHSV());
     }
 
     public void SetSegmentationThreshold(float chance)

@@ -38,8 +38,13 @@ public class EventHandler : MonoBehaviour
 
         if (segmentationChance <= cube.SegmentationThreshold)
         {
-            Rigidbody[] cubes = _spawner.SpawnCubes(cube.transform);
-            _exploder.Explode(cubes, cube.transform);
+            Cube[] cubes = _spawner.SpawnCubes(cube.transform, cube.SegmentationThreshold);
+            Rigidbody[] rigidbodies = new Rigidbody[cubes.Length];
+
+            for (int i = 0; i < cubes.Length; i++)
+                rigidbodies[i] = cubes[i].GetComponent<Rigidbody>();
+
+            _exploder.Explode(rigidbodies, cube.transform);
         }
         else
         {
